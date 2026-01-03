@@ -1,0 +1,19 @@
+# UR5 planning & control input file
+
+# Move 40 cm forward in x, 15 cm down in z, rotate about y by -90 degrees
+Ts_start: 0.3926  0.1915  0.4195  0.0    2.2214  2.2214                     # x y z wx wy wz
+Ts_end:   0.7925884388520618 0.19145 0.2695088652460297 1.2091995761561452 1.2091995761561454 1.2091995761561454
+
+traj_type: Screw_Quintic                          # options: Screw_Cubic, Screw_Quintic, Cartesian_Cubic, Cartesian_Quintic
+
+Tf:        7.0                                  # Total motion time (seconds)
+
+theta0:    0.0  -1.57  0.0  0.0  0.0  3.14      # Actual initial configuration: 6 joint angles (radians) 
+
+# Optional controller parameters (scalars)
+Kp:        16.0
+Kd:        8.0
+Ki:        0.0
+
+# Optional time step (seconds)
+dt:        0.01
